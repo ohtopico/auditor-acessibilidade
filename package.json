@@ -1,0 +1,35 @@
+{
+  "name": "auditor-acessibilidade",
+  "version": "0.1.0",
+  "description": "Auditor de acessibilidade de sites com relatório em português: contraste, textos alternativos, ordem de leitura e foco do teclado.",
+  "main": "index.js",
+  "scripts": {
+    "exemplo": "node bin/auditar.js test/paginas/ruim.html test/paginas/boa.html -s exemplo",
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "acessibilidade",
+    "a11y",
+    "wcag",
+    "axe-core",
+    "portugues"
+  ],
+  "author": "Júlia Roberta Quoos Alves",
+  "license": "MIT",
+  "dependencies": {
+    "axe-core": "^4.10.3",
+    "playwright": "^1.63.0"
+  },
+  "type": "module",
+  "bin": {
+    "auditar": "bin/auditar.js"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohtopico/auditor-acessibilidade.git"
+  },
+  "homepage": "https://github.com/ohtopico/auditor-acessibilidade"
+}

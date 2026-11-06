@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Página acessível de exemplo</title>
+<style>
+  body { font-family: sans-serif; color: #111; background: #fff; }
+  a { color: #166c40; }
+  :focus-visible { outline: 3px solid #111; outline-offset: 2px; }
+</style></head>
+<body>
+  <header><nav aria-label="Principal"><a href="#conteudo">Início</a> <a href="#contato">Contato</a></nav></header>
+  <main id="conteudo">
+    <h1>Materiais de computação</h1>
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Estudantes programando um robô em sala de aula">
+    <h2>Planos de aula</h2>
+    <p>Planos de aula gratuitos para o 6º ao 9º ano.</p>
+    <h2 id="contato">Contato</h2>
+    <form>
+      <label for="email">E-mail</label>
+      <input id="email" type="email">
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+  <footer><p>Feito com cuidado.</p></footer>
+</body>
+</html>

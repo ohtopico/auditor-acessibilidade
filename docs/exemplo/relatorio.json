@@ -1,0 +1,521 @@
+[
+  {
+    "endereco": "./test/paginas/ruim.html",
+    "tela": "computador",
+    "data": "2026-11-06T13:23:40.892Z",
+    "tituloPagina": "",
+    "idioma": "en",
+    "indice": 9,
+    "contagem": {
+      "critical": 2,
+      "serious": 9,
+      "moderate": 3,
+      "minor": 0
+    },
+    "problemas": [
+      {
+        "origem": "axe",
+        "regra": "image-alt",
+        "titulo": "Imagens devem ter texto alternativo",
+        "descricao": "Certifique-se de que elementos <img> tenham texto alternativo ou um 'role' igual a 'none' ou 'presentation'",
+        "impacto": "critical",
+        "criterio": "WCAG 1.1.1",
+        "porque": "Leitores de tela não enxergam a imagem: sem texto alternativo, a pessoa cega ouve só \"imagem\" ou o nome do arquivo.",
+        "corrigir": "Adicione alt=\"...\" descrevendo o que a imagem comunica. Se for só decoração, use alt=\"\" (vazio).",
+        "saibaMais": "https://dequeuniversity.com/rules/axe/4.10/image-alt?application=axeAPI",
+        "ocorrencias": [
+          {
+            "seletor": "img[src$=\"logo.png\"]",
+            "html": "<img src=\"logo.png\">",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  O elemento não tem um atributo 'alt'\n  O atributo 'aria-label' não existe ou está vazio\n  O atributo 'aria-labelledby' não existe, referencia elementos que não existem ou são vazios\n  O elemento não tem um atributo 'title'\n  A semântica padrão do elemento não foi sobrescrita com role=\"none\" or role=\"presentation\""
+          },
+          {
+            "seletor": "img[src$=\"casa.svg\"]",
+            "html": "<img src=\"casa.svg\">",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  O elemento não tem um atributo 'alt'\n  O atributo 'aria-label' não existe ou está vazio\n  O atributo 'aria-labelledby' não existe, referencia elementos que não existem ou são vazios\n  O elemento não tem um atributo 'title'\n  A semântica padrão do elemento não foi sobrescrita com role=\"none\" or role=\"presentation\""
+          }
+        ]
+      },
+      {
+        "origem": "axe",
+        "regra": "button-name",
+        "titulo": "Botões devem ter texto discernível",
+        "descricao": "Certifique-se de que botões tenham texto discernível",
+        "impacto": "critical",
+        "criterio": "WCAG 4.1.2",
+        "porque": "Um botão sem nome é anunciado apenas como \"botão\", sem dizer o que faz.",
+        "corrigir": "Escreva um texto no botão ou use aria-label=\"O que o botão faz\".",
+        "saibaMais": "https://dequeuniversity.com/rules/axe/4.10/button-name?application=axeAPI",
+        "ocorrencias": [
+          {
+            "seletor": "button",
+            "html": "<button></button>",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  O elemento não tem texto interno que seja visível aos leitores de tela\n  O atributo 'aria-label' não existe ou está vazio\n  O atributo 'aria-labelledby' não existe, referencia elementos que não existem ou são vazios\n  O elemento não tem um atributo 'title'\n  O elemento de formulário não tem <label> implícito (envolvido)\n  O elemento de formulário não tem um <label> explícito\n  A semântica padrão do elemento não foi sobrescrita com role=\"none\" or role=\"presentation\""
+          }
+        ]
+      },
+      {
+        "origem": "auditor",
+        "regra": "foco-invisivel",
+        "titulo": "Foco do teclado invisível",
+        "descricao": "",
+        "impacto": "serious",
+        "criterio": "WCAG 2.4.7",
+        "porque": "Quem navega pelo teclado (Tab) precisa ver onde está. Sem contorno de foco, a pessoa fica \"às cegas\".",
+        "corrigir": "Não remova o outline. Se quiser mudar o visual, use :focus-visible { outline: 3px solid #111; outline-offset: 2px; }.",
+        "saibaMais": "",
+        "ocorrencias": [
+          {
+            "seletor": "",
+            "html": "",
+            "resumo": "1. <a> \"Pula a fila\""
+          },
+          {
+            "seletor": "",
+            "html": "",
+            "resumo": "2. <a>"
+          },
+          {
+            "seletor": "",
+            "html": "",
+            "resumo": "3. <input> \"Seu e-mail\""
+          },
+          {
+            "seletor": "",
+            "html": "",
+            "resumo": "4. <button>"
+          },
+          {
+            "seletor": "",
+            "html": "",
+            "resumo": "5. <a> \"Primeiro no código\""
+          },
+          {
+            "seletor": "",
+            "html": "",
+            "resumo": "6. <a> \"Segundo no código\""
+          }
+        ]
+      },
+      {
+        "origem": "axe",
+        "regra": "target-size",
+        "titulo": "Áreas de toque devem ter pelo menos 24×24 px ou espaço suficiente ao redor",
+        "descricao": "Ensure touch targets have sufficient size and space",
+        "impacto": "serious",
+        "criterio": "WCAG 2.5.8",
+        "porque": "Botões e links muito pequenos ou colados uns nos outros são difíceis de acertar para quem tem tremor, mobilidade reduzida ou usa o celular.",
+        "corrigir": "Deixe cada alvo com pelo menos 24×24 px (o ideal é 44×44 px) ou com espaço livre ao redor.",
+        "saibaMais": "https://dequeuniversity.com/rules/axe/4.10/target-size?application=axeAPI",
+        "ocorrencias": [
+          {
+            "seletor": "input",
+            "html": "<input type=\"text\" placeholder=\"Seu e-mail\">",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  Target has insufficient size (185px by 21px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21px instead of at least 24px."
+          },
+          {
+            "seletor": "button",
+            "html": "<button></button>",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  Target has insufficient size (16px by 6px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12px instead of at least 24px."
+          },
+          {
+            "seletor": "a[href=\"#a\"]",
+            "html": "<a href=\"#a\">Primeiro no código</a>",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  Target has insufficient size (1264px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12px instead of at least 24px."
+          },
+          {
+            "seletor": "a[href=\"#b\"]",
+            "html": "<a href=\"#b\">Segundo no código</a>",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  Target has insufficient size (1264px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12px instead of at least 24px."
+          }
+        ]
+      },
+      {
+        "origem": "auditor",
+        "regra": "salto-ordem",
+        "titulo": "Ordem de foco salta para trás",
+        "descricao": "",
+        "impacto": "serious",
+        "criterio": "WCAG 2.4.3",
+        "porque": "O Tab deveria seguir a ordem de leitura (de cima para baixo, da esquerda para a direita). Saltos fazem a pessoa perder o contexto.",
+        "corrigir": "Deixe a ordem do HTML igual à ordem visual. Evite reordenar com CSS (order, flex-direction: reverse, position) e evite tabindex positivo.",
+        "saibaMais": "",
+        "ocorrencias": [
+          {
+            "seletor": "",
+            "html": "",
+            "resumo": "1. <a> \"Pula a fila\" → 2. <a> (sobe 220px)"
+          },
+          {
+            "seletor": "",
+            "html": "",
+            "resumo": "5. <a> \"Primeiro no código\" → 6. <a> \"Segundo no código\" (sobe 18px)"
+          }
+        ]
+      },
+      {
+        "origem": "axe",
+        "regra": "color-contrast",
+        "titulo": "Os elementos devem ter contraste de cor suficiente",
+        "descricao": "Certifique-se de que o contraste entre as cores de primeiro plano e de fundo atenda aos limites de relação de contraste WCAG 2 AA",
+        "impacto": "serious",
+        "criterio": "WCAG 1.4.3",
+        "porque": "Pessoas com baixa visão, daltonismo ou usando o celular no sol não conseguem ler texto com pouco contraste.",
+        "corrigir": "Escureça o texto ou clareie o fundo até chegar a 4,5:1 (texto normal) ou 3:1 (texto grande, a partir de 24px ou 19px em negrito).",
+        "saibaMais": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+        "ocorrencias": [
+          {
+            "seletor": ".claro",
+            "html": "<p class=\"claro\">Este texto está com pouco contraste e é difícil de ler para muitas pessoas que acessam a página pelo celular.</p>",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  O elemento tem contraste insuficiente no valor de 1.91 (cor do primeiro plano: #bbbbbb, cor de fundo: #ffffff, tamanho da fonte: 12.0pt (16px), normal/negrito: normal). Contraste esperado no valor de 4.5:1"
+          }
+        ]
+      },
+      {
+        "origem": "axe",
+        "regra": "document-title",
+        "titulo": "Documentos devem ter um elemento <title> para ajudar na navegação",
+        "descricao": "Certifique-se de que cada documento HTML contenha um elemento <title> não vazio",
+        "impacto": "serious",
+        "criterio": "WCAG 2.4.2",
+        "porque": "O título da página é a primeira coisa que o leitor de tela anuncia e é o nome da aba.",
+        "corrigir": "Coloque um <title> que descreva a página.",
+        "saibaMais": "https://dequeuniversity.com/rules/axe/4.10/document-title?application=axeAPI",
+        "ocorrencias": [
+          {
+            "seletor": "html",
+            "html": "<html lang=\"en\">",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  O documento não tem um elemento <title> não vazio"
+          }
+        ]
+      },
+      {
+        "origem": "axe",
+        "regra": "link-name",
+        "titulo": "Links devem ter um texto discernível",
+        "descricao": "Certifique-se de que links tenham um texto discernível",
+        "impacto": "serious",
+        "criterio": "WCAG 2.4.4, WCAG 4.1.2",
+        "porque": "Um link sem texto (por exemplo, só um ícone) é anunciado apenas como \"link\".",
+        "corrigir": "Coloque texto no link, um alt na imagem de dentro ou aria-label=\"Destino do link\".",
+        "saibaMais": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+        "ocorrencias": [
+          {
+            "seletor": "a[href=\"/\"]",
+            "html": "<a href=\"/\"><img src=\"casa.svg\"></a>",
+            "resumo": "Corrija todos os itens a seguir:\n  O elemento está na ordem de tabulação e não tem nome acessível\n\nCorrija qualquer um dos itens a seguir:\n  O elemento não tem texto que seja visível aos leitores de tela\n  O atributo 'aria-label' não existe ou está vazio\n  O atributo 'aria-labelledby' não existe, referencia elementos que não existem ou são vazios\n  O elemento não tem um atributo 'title'"
+          }
+        ]
+      },
+      {
+        "origem": "axe",
+        "regra": "tabindex",
+        "titulo": "Elementos não devem ter um 'tabindex' maior do que zero",
+        "descricao": "Certifique-se de que os valores do atributo 'tabindex' não são maiores do que 0",
+        "impacto": "serious",
+        "criterio": "Boa prática",
+        "porque": "tabindex maior que 0 bagunça a ordem natural do teclado.",
+        "corrigir": "Use tabindex=\"0\" ou reorganize o HTML para que a ordem do código seja a ordem de leitura.",
+        "saibaMais": "https://dequeuniversity.com/rules/axe/4.10/tabindex?application=axeAPI",
+        "ocorrencias": [
+          {
+            "seletor": "a[href=\"#c\"]",
+            "html": "<a href=\"#c\" tabindex=\"3\">Pula a fila</a>",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  O elemento tem um 'tabindex' maior do que 0"
+          }
+        ]
+      },
+      {
+        "origem": "auditor",
+        "regra": "alt-suspeito",
+        "titulo": "Texto alternativo pouco útil",
+        "descricao": "",
+        "impacto": "serious",
+        "criterio": "WCAG 1.1.1",
+        "porque": "Textos como \"imagem\", \"foto\" ou o nome do arquivo não dizem nada sobre o conteúdo.",
+        "corrigir": "Descreva o que a imagem mostra e por que ela está ali.",
+        "saibaMais": "",
+        "ocorrencias": [
+          {
+            "seletor": "",
+            "html": "",
+            "resumo": "alt=\"IMG_2034.jpg\" (foto.jpg)"
+          }
+        ]
+      },
+      {
+        "origem": "auditor",
+        "regra": "idioma-diferente",
+        "titulo": "Idioma declarado não é português",
+        "descricao": "",
+        "impacto": "serious",
+        "criterio": "WCAG 3.1.1",
+        "porque": "O conteúdo parece estar em português, mas o lang diz outra língua: o leitor de tela vai pronunciar errado.",
+        "corrigir": "Use <html lang=\"pt-BR\">.",
+        "saibaMais": "",
+        "ocorrencias": [
+          {
+            "seletor": "",
+            "html": "",
+            "resumo": "lang=\"en\""
+          }
+        ]
+      },
+      {
+        "origem": "axe",
+        "regra": "region",
+        "titulo": "Todo o conteúdo da página deve estar contido em regiões (landmarks)",
+        "descricao": "Certifique-se de todo o conteúdo da página esteja contido em regiões (landmarks)",
+        "impacto": "moderate",
+        "criterio": "Boa prática",
+        "porque": "Regiões (cabeçalho, navegação, conteúdo principal, rodapé) permitem pular direto para o que interessa.",
+        "corrigir": "Envolva o conteúdo em <header>, <nav>, <main> e <footer>.",
+        "saibaMais": "https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI",
+        "ocorrencias": [
+          {
+            "seletor": ".topo",
+            "html": "<div class=\"topo\">\n    <img src=\"logo.png\">\n    <img src=\"foto.jpg\" alt=\"IMG_2034.jpg\">\n    <a href=\"/\"><img src=\"casa.svg\"></a>\n  </div>",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  Algum conteúdo da página não está contido em regiões (landmarks)"
+          },
+          {
+            "seletor": "h3",
+            "html": "<h3>Bem-vindo ao nosso site de cursos</h3>",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  Algum conteúdo da página não está contido em regiões (landmarks)"
+          },
+          {
+            "seletor": ".claro",
+            "html": "<p class=\"claro\">Este texto está com pouco contraste e é difícil de ler para muitas pessoas que acessam a página pelo celular.</p>",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  Algum conteúdo da página não está contido em regiões (landmarks)"
+          },
+          {
+            "seletor": "p:nth-child(4)",
+            "html": "<p>Aqui você encontra cursos de programação para professores da rede pública, com materiais gratuitos para usar em sala de aula. Não é preciso se cadastrar para ver os planos de aula, que também estão disponíveis para impressão.</p>",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  Algum conteúdo da página não está contido em regiões (landmarks)"
+          },
+          {
+            "seletor": "input",
+            "html": "<input type=\"text\" placeholder=\"Seu e-mail\">",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  Algum conteúdo da página não está contido em regiões (landmarks)"
+          },
+          {
+            "seletor": ".rodape",
+            "html": "<div class=\"rodape\">\n    <a href=\"#a\">Primeiro no código</a>\n    <a href=\"#b\">Segundo no código</a>\n  </div>",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  Algum conteúdo da página não está contido em regiões (landmarks)"
+          },
+          {
+            "seletor": "a[href=\"#c\"]",
+            "html": "<a href=\"#c\" tabindex=\"3\">Pula a fila</a>",
+            "resumo": "Corrija qualquer um dos itens a seguir:\n  Algum conteúdo da página não está contido em regiões (landmarks)"
+          }
+        ]
+      },
+      {
+        "origem": "axe",
+        "regra": "landmark-one-main",
+        "titulo": "O documento deve ter uma região 'main'",
+        "descricao": "Certifique-se de que o documento tenha apenas uma região 'main' e que cada 'iframe' na página tenha no náximo uma região 'main'",
+        "impacto": "moderate",
+        "criterio": "Boa prática",
+        "porque": "Sem <main>, não há atalho para pular direto ao conteúdo principal.",
+        "corrigir": "Envolva o conteúdo principal em <main>.",
+        "saibaMais": "https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=axeAPI",
+        "ocorrencias": [
+          {
+            "seletor": "html",
+            "html": "<html lang=\"en\">",
+            "resumo": "Corrija todos os itens a seguir:\n  O documento não tem uma região 'main'"
+          }
+        ]
+      },
+      {
+        "origem": "axe",
+        "regra": "page-has-heading-one",
+        "titulo": "A página deve conter um título de primeiro nível",
+        "descricao": "Certifique-se de que a página, ou pelo menos um dos seus 'frames', contenha um título de primeiro nível",
+        "impacto": "moderate",
+        "criterio": "Boa prática",
+        "porque": "O título principal (h1) diz do que a página trata.",
+        "corrigir": "Coloque um único <h1> com o assunto principal da página.",
+        "saibaMais": "https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI",
+        "ocorrencias": [
+          {
+            "seletor": "html",
+            "html": "<html lang=\"en\">",
+            "resumo": "Corrija todos os itens a seguir:\n  A página deve ter pelo menos um título de primeiro nível"
+          }
+        ]
+      }
+    ],
+    "paraConferir": [],
+    "regrasAprovadas": 17,
+    "titulos": [
+      {
+        "nivel": 3,
+        "texto": "Bem-vindo ao nosso site de cursos"
+      }
+    ],
+    "imagens": {
+      "total": 3,
+      "semAlt": 2
+    },
+    "ordemFoco": [
+      {
+        "tag": "a",
+        "papel": "",
+        "nome": "Pula a fila",
+        "tabindex": 3,
+        "focoVisivel": false,
+        "x": 8,
+        "y": 230,
+        "largura": 70,
+        "altura": 17,
+        "problema": true
+      },
+      {
+        "tag": "a",
+        "papel": "",
+        "nome": "",
+        "tabindex": null,
+        "focoVisivel": false,
+        "x": 149,
+        "y": 10,
+        "largura": 16,
+        "altura": 17,
+        "problema": true
+      },
+      {
+        "tag": "input",
+        "papel": "",
+        "nome": "Seu e-mail",
+        "tabindex": null,
+        "focoVisivel": false,
+        "x": 8,
+        "y": 173,
+        "largura": 185,
+        "altura": 21,
+        "problema": true
+      },
+      {
+        "tag": "button",
+        "papel": "",
+        "nome": "",
+        "tabindex": null,
+        "focoVisivel": false,
+        "x": 197,
+        "y": 185,
+        "largura": 16,
+        "altura": 6,
+        "problema": true
+      },
+      {
+        "tag": "a",
+        "papel": "",
+        "nome": "Primeiro no código",
+        "tabindex": null,
+        "focoVisivel": false,
+        "x": 8,
+        "y": 212,
+        "largura": 1264,
+        "altura": 18,
+        "problema": true
+      },
+      {
+        "tag": "a",
+        "papel": "",
+        "nome": "Segundo no código",
+        "tabindex": null,
+        "focoVisivel": false,
+        "x": 8,
+        "y": 194,
+        "largura": 1264,
+        "altura": 18,
+        "problema": true
+      }
+    ],
+    "ordemFocoCompleta": true,
+    "versaoAxe": "4.10.3"
+  },
+  {
+    "endereco": "./test/paginas/boa.html",
+    "tela": "computador",
+    "data": "2026-11-06T13:23:42.321Z",
+    "tituloPagina": "Página acessível de exemplo",
+    "idioma": "pt-BR",
+    "indice": 100,
+    "contagem": {
+      "critical": 0,
+      "serious": 0,
+      "moderate": 0,
+      "minor": 0
+    },
+    "problemas": [],
+    "paraConferir": [],
+    "regrasAprovadas": 35,
+    "titulos": [
+      {
+        "nivel": 1,
+        "texto": "Materiais de computação"
+      },
+      {
+        "nivel": 2,
+        "texto": "Planos de aula"
+      },
+      {
+        "nivel": 2,
+        "texto": "Contato"
+      }
+    ],
+    "imagens": {
+      "total": 1,
+      "semAlt": 0
+    },
+    "ordemFoco": [
+      {
+        "tag": "a",
+        "papel": "",
+        "nome": "Início",
+        "tabindex": null,
+        "focoVisivel": true,
+        "x": 8,
+        "y": 8,
+        "largura": 38,
+        "altura": 17
+      },
+      {
+        "tag": "a",
+        "papel": "",
+        "nome": "Contato",
+        "tabindex": null,
+        "focoVisivel": true,
+        "x": 51,
+        "y": 8,
+        "largura": 56,
+        "altura": 17
+      },
+      {
+        "tag": "input",
+        "papel": "",
+        "nome": "",
+        "tabindex": null,
+        "focoVisivel": true,
+        "x": 58,
+        "y": 278,
+        "largura": 185,
+        "altura": 21
+      },
+      {
+        "tag": "button",
+        "papel": "",
+        "nome": "Enviar",
+        "tabindex": null,
+        "focoVisivel": true,
+        "x": 247,
+        "y": 278,
+        "largura": 54,
+        "altura": 21
+      }
+    ],
+    "ordemFocoCompleta": true,
+    "versaoAxe": "4.10.3"
+  }
+]
